@@ -26,7 +26,6 @@
     text-align: center;
 }
 #about {
-    visibility: hidden;
  h1 {
     text-align: center;
     padding-top: 80px;
@@ -124,3 +123,14 @@ img {
     background-color: black;
     color: white;
 }
+
+.fadein {
+    opacity : 0;
+    transform : translate(0, 100px);
+    transition : all 1s;
+  }
+   
+  .fadein.active{
+    opacity : 1;
+    transform : translate(0, 0);
+  }

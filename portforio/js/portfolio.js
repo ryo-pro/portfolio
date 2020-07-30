@@ -17,18 +17,16 @@ $(function(){
         return false;
     });
 
-    // スクロールしたら表示する（waypoints）
-
-    $("#about").waypoint(function(){
-        if($("#about").css("visibility") == "visible"){
-
-        } 
-        else{
-            $("#about").css("visibility","visible");
-            // $("#about").fadeIn();
-            $("#about").toggleClass("animated fadeInUp");
-        }
-    },{offset: "40%"});
+    $(window).scroll(function (){
+        $('.fadein').each(function(){
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > position - windowHeight + 300){
+              $(this).addClass('active');
+            }
+        });
+    });
 
     // スムーズスクロール
 
@@ -44,4 +42,19 @@ $(function(){
 
 
 
+
+
+
+// スクロールしたら表示する（waypoints）
+
+// $("#about").waypoint(function(){
+//     if($("#about").css("visibility") == "visible"){
+
+//     } 
+//     else{
+//         $("#about").css("visibility","visible");
+//         // $("#about").fadeIn();
+//         $("#about").toggleClass("animated fadeInUp");
+//     }
+// },{offset: "40%"});
 

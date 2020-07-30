@@ -17,10 +17,6 @@
   z-index: 100;
 }
 
-#about {
-  visibility: hidden;
-}
-
 #about h1 {
   text-align: center;
   padding-top: 80px;
@@ -169,5 +165,19 @@
   text-align: center;
   background-color: black;
   color: white;
+}
+
+.fadein {
+  opacity: 0;
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.fadein.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 /*# sourceMappingURL=portfolio.css.map */
