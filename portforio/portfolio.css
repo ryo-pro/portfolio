@@ -57,11 +57,12 @@
 
 #SKILLS {
   text-align: center;
+  color: white;
 }
 
 #SKILLS h1 {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 150px;
   position: relative;
 }
 
@@ -179,5 +180,13 @@
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+.fixed-bg {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(img/top1.png);
 }
 /*# sourceMappingURL=portfolio.css.map */
